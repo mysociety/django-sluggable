@@ -10,13 +10,15 @@ with open(os.path.join(root, 'README.rst')) as f:
     README = f.read()
 
 setup(
-    name='django-sluggable',
+    name='mysociety-django-sluggable',
     version=version,
     description='Slug your multiple models and manage redirections',
     long_description=README,
     author='Florent Messa',
     author_email='florent.messa@gmail.com',
-    url='http://github.com/thoas/django-sluggable',
+    maintainer='Matthew Somerville',
+    maintainer_email='matthew@mysociety.org',
+    url='http://github.com/mysociety/django-sluggable',
     packages=find_packages(),
     zip_safe=False,
     include_package_data=True,

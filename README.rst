@@ -1,9 +1,9 @@
 django-sluggable
 ================
 
-.. image:: https://secure.travis-ci.org/thoas/django-sluggable.png?branch=master
+.. image:: https://secure.travis-ci.org/mysociety/django-sluggable.png?branch=master
     :alt: Build Status
-    :target: http://travis-ci.org/thoas/django-sluggable
+    :target: http://travis-ci.org/mysociety/django-sluggable
 
 
 django-sluggable is a library to manage your slugs and redirect old slugs
@@ -28,7 +28,7 @@ Installation
 
 To install it, simply ::
 
-    pip install django-sluggable
+    pip install mysociety-django-sluggable
 
 Documentation
 -------------
