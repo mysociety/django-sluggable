@@ -109,7 +109,7 @@ class SluggableField(models.SlugField):
         if value is None:
             return None
 
-        return unicode(value)
+        return six.text_type(value)
 
     def south_field_triple(self):
         "Returns a suitable description of this field for South."
