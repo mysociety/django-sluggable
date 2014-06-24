@@ -1,0 +1,7 @@
+0.2.5
+    * Better Python 3 compatibility
+0.2.4
+    * Add unique_with to restrict slug uniqueness to the fields specified
+    * Still generate uniqueness lookups when a uniqueness field is empty
+0.2.3
+    * Current upstream verson
