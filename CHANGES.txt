@@ -1,3 +1,6 @@
+0.2.6
+    * Default to a slugify.slugify function if present, to provide
+      better i18n support.
 0.2.5
     * Better Python 3 compatibility
 0.2.4
