@@ -1,3 +1,6 @@
+0.2.7
+    * Update from upstream for Django 1.8 compatibility.
+    * Deal with import move of GenericRelation.
 0.2.6
     * Default to a slugify.slugify function if present, to provide
       better i18n support.
