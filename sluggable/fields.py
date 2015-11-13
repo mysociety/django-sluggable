@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 from django.db.models import signals
 from django.db import models
 from django.utils import six
@@ -109,7 +111,7 @@ class SluggableField(models.SlugField):
         if value is None:
             return None
 
-        return six.text_type(value)
+        return value
 
     def south_field_triple(self):
         "Returns a suitable description of this field for South."
