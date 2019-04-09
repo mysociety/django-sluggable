@@ -1,7 +1,20 @@
-dist: trusty
-sudo: required
+dist: xenial
 language: python
 python: 3.6
+
+env:
+  matrix:
+    - TOXENV=py36-dj111
+    - TOXENV=py36-dj21
+    - TOXENV=py36-dj22
+
+matrix:
+  include:
+    - python: 2.7
+      env: TOXENV=py27-dj111
+  allow_failures:
+    - env: TOXENV=py36-dj21
+    - env: TOXENV=py36-dj22
 
 install: pip install tox
 script: tox

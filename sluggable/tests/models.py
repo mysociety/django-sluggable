@@ -34,7 +34,7 @@ class PostSlug(Slug):
     pass
 
 class Post(models.Model):
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     slug = SluggableField(unique_with="user")
     slugs = GenericRelation(PostSlug)
 
@@ -44,7 +44,7 @@ class DayPost(models.Model):
     slugs = GenericRelation(PostSlug)
 
 class WordPost(models.Model):
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     word = models.CharField(max_length=50, blank=True)
     slug = SluggableField(unique_with=("user", "word"))
     slugs = GenericRelation(PostSlug)
