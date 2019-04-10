@@ -17,7 +17,7 @@ def get_prepopulated_value(instance, populate_from):
     """
     Returns preliminary value based on `populate_from`.
     """
-    if hasattr(populate_from, '__call__'):
+    if hasattr(populate_from, "__call__"):
         return populate_from(instance)
 
     attr = getattr(instance, populate_from)
@@ -65,14 +65,12 @@ def generate_unique_slug(field, instance, slug, manager):
         tail_length = len(field.index_sep) + len(str(index))
         combined_length = len(original_slug) + tail_length
         if field.max_length < combined_length:
-            original_slug = original_slug[:field.max_length - tail_length]
+            original_slug = original_slug[: field.max_length - tail_length]
 
         # re-generate the slug
-        data = dict(slug=original_slug,
-                    sep=field.index_sep,
-                    index=index)
+        data = dict(slug=original_slug, sep=field.index_sep, index=index)
 
-        slug = '%(slug)s%(sep)s%(index)d' % data
+        slug = "%(slug)s%(sep)s%(index)d" % data
 
     return slug
 
